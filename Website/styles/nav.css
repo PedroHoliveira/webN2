@@ -1,0 +1,31 @@
+.nav-principal {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 15px;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    background-color: darkgrey;
+}
+
+.nav-lista {
+    display: inline-block;
+    margin: 0 50px;
+    z-index: -1;
+}
+
+.nome-logo{
+    margin-left: 55px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+nav a:hover {
+    color: #ff0000;
+}

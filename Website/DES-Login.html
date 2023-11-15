@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script language="JavaScript1.2" type="text/javascript" src="javascript/efeitobotao.js"></script>
+    <script language="JavaScript1.2" type="text/javascript" src="javascript/ValidacaoForm.js"></script>
+    <style>
+
+
+        #elemento1 {
+            background-color: #02729b;
+            border-radius: 5%;
+            width: 507px;
+            height: 500px;
+            float: left;
+        }
+
+        #elemento2 {
+            width: 10px;
+            height: 500px;
+            float: left;
+        }
+
+        #elemento3 {
+            background-color: #02729b;
+            border-radius: 5%;
+            width: 507px;
+            height: 500px;
+            float: left;
+        }
+
+        .inputBox1 {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input {
+            border-color: #DCE6F2;
+            border-style: solid;
+            border-width: thin;
+        }
+
+        input:hover {
+            border-color: #33CAFF;
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .InputEntrar {
+            float: left;
+            position: relative;
+            background-image: url(css/CssImg/BotaoEntrar-1.png);
+            background-repeat: no-repeat;
+            border: none;
+            width: 100px;
+            height: 50px;
+        }
+
+        .InputEntrar:hover {
+            background-image: url(css/CssImg/BotaoEntrar-2.png);
+            border: none;
+        }
+
+        .InputEnviar {
+            float: left;
+            position: relative;
+            background-image: url(css/CssImg/Enviar-1.png);
+            background-repeat: no-repeat;
+            border: none;
+            width: 100px;
+            height: 50px;
+        }
+
+        .InputEnviar:hover {
+            background-image: url(css/CssImg/Enviar-2.png);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!---LOGIN--->
+    <div id="elemento1">
+        <form id="form1" class="form1" name="form1" action="DES-FazerLogin.php" method="post">
+            <h1>Faça seu login</h1>
+            <label for="Usuário">Usuário:</label>
+            <input name="TxtUsuario" type="text" class="inputBox1" placeholder="E-mail">
+
+            <label for="Senha">Senha:</label>
+            <input name="TxtSenha" type="Password" class="inputBox1" placeholder="Senha">
+
+            <input type="submit" class="InputEntrar" name="FazerLogin" value="">
+
+        </form>
+    </div>
+
+    <div id="elemento2"></div>
+
+    <!---ESQUECI MINHA SENHA--->
+    <div id="elemento3">
+        <form id="form2" class="form2" name="form2" action="DES-RedefinirSenha.php" method="post">
+            <h1>Esqueceu a senha?</h1>
+            <p>Digite os dados solicitados e uma nova senha será enviada para o e-mail cadastrado.</p>
+
+            <label for="Usuário">Usuário:</label>
+            <input type="text" name="TxtUsuario" class="inputBox1" placeholder="E-mail"
+                onblur="return VerificarEmail ()">
+
+            <label for="DataNascimento">Data de Nascimento:</label>
+            <input type="text" name="TxtDataNasc" class="inputBox1" maxlength="10" onblur="return VerificarDatanasc ()"
+                onkeypress="return dateMask(this, event);" />
+
+            <input type="submit" class="InputEnviar" name="enviar" value="">
+        </form>
+    </div>
+
+</body>
+
+</html>

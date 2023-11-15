@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+
+<head>
+    <title>Cadastre-se</title>
+    <script language="JavaScript1.2" type="text/javascript" src="javascript/efeitobotao.js"></script>
+    <script language="JavaScript1.2" type="text/javascript" src="javascript/ValidacaoForm.js"></script>
+    <script src="javascript/jquery-1.5.2.min.js" type="text/javascript"></script>
+    <script src="javascript/jquery.maskedinput-1.3.min.js" type="text/javascript"></script>
+    <style>
+        .form1 {
+            display: flex;
+            justify-content: space-between;
+            /* Distribui as divs igualmente na largura */
+        }
+
+        .elemento {
+            flex: 1; /* Faz as divs ocuparem a mesma largura */
+            background-color: #00B0F0;
+            padding: 10px;
+            margin-bottom: 10px; /* Espaçamento inferior entre as divs */
+            margin-right: 10px; /* Espaçamento à direita entre as divs */
+            border-radius: 5%;
+        }
+
+        .inputBox1 {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input {
+            border-color: #DCE6F2;
+            border-style: solid;
+            border-width: thin;
+        }
+
+        input:hover {
+            border-color: #33CAFF;
+            border-style: solid;
+            border-width: thin;
+        }
+
+        .BotaoCadastrar {
+            background-image: url(css/CssImg/BotaoCadastrar-1.png);
+            background-repeat: no-repeat;
+            border: none;
+            width: 100px;
+            height: 50px;
+            margin-top: 20px;
+        }
+
+        .BotaoCadastrar:hover {
+            background-image: url(css/CssImg/BotaoCadastrar-2.png);
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form1" class="form1" name="form1" action="DES-IncluirCad.php" method="post">
+
+        <div class="elemento">
+            <!-- DADOS PESSOAIS -->
+            <h1>DADOS PESSOAIS</h1>
+            <label for="nome">Nome:</label>
+            <input type="text" class="inputBox1" name="nome_cliente" maxlength="50" onblur="return VerificarNome ()">
+
+            <label for="nome">Data de Nascimento:</label>
+            <input type="text" class="inputBox1" name="datanasc_cliente" maxlength="10"
+                onblur="return VerificarDatanasc ()" onkeypress="return dateMask(this, event);" />
+
+            <label for="nome">Gênero:</label>
+            <select id="sexo" class="inputBox1" name="genero_cliente" onblur="return VerificarEstado ()">
+                <option value="m">Masculino</option>
+                <option value="f">Feminino</option>
+            </select>
+
+            <label for="nome">Telefone:</label>
+            <input type="text" class="inputBox1" name="celular_cliente" maxlength="11"
+                onblur="return VerificarTelefone ()">
+        </div>
+
+        <div class="elemento">
+            <!-- USUARIO E SENHA -->
+            <h1>SEGURANÇA</h1>
+            <label for="nome">Usuário:</label>
+            <input type="text" class="inputBox1" name="email_cliente" placeholder="E-mail"
+                onblur="return VerificarEmail ()">
+
+            <label for="nome">Senha:</label>
+            <input type="Password" class="inputBox1" name="senha_cliente" placeholder="Senha" maxlength="16"
+                onblur="return VerificarSenha ()">
+
+            <label for="nome">Repita a senha:</label>
+            <input type="Password" class="inputBox1" name="ConfirmarSenha" placeholder="Confirmar senha" maxlength="16"
+                onblur="return VerificarConfirmarSenha ()">
+
+            <input type="submit" class="BotaoCadastrar" name="Cadastrar" value="" onclick="return Validar()">
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+@import url(nav.css);
+@import url(resetcss.css);
+@import url(footer.css);
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    text-decoration: none;
+    color: #000000;
+}
+.apresentacao__imagem{
+    margin: 70px 0 0 70px;
+    width: 90%;
+    height: 10%;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+}
+
+.enredo{
+    align-items: center;
+    text-align: center;
+    
+}
+.entorno{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    padding: 10px; 
+}
+
+.enredo__titulo{
+    margin: 20px 0;
+    font-size: xx-large;
+}
+.enredo__texto{
+    text-align: left;
+    color: black;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-shadow: -10px -10px 8px rgba(9,9,121,0.8);
+}
